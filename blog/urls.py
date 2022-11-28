@@ -18,7 +18,9 @@ from . import views
 
 urlpatterns = [
 #채울예정
-    path('<int:pk>/', views.single_post_page),
-    path('',views.index),
+    path('<int:pk>/', views.PostDetail.as_view())
+    path('',views.PostList.as_view()),
+    #path('<int:pk>/', views.single_post_page),
+    #path('',views.index),
 
 ]
