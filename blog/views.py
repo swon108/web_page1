@@ -1,10 +1,11 @@
 from django.views.generic import ListView, DetailView
 from .models import Post
+from django.shortcuts import render
 # Create your views here.
 
 class PostList(ListView):
     model = Post
-    template_naame = 'blog/index.html'
+    template_name = 'blog/index.html'
     ordering = '-pk'
 
 class PostDetail(DetailView):
